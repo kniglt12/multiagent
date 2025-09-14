@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 async function main() {
-    console.log("开始程序...");
     const logDir = path.join(__dirname, "src/log");
     if (!fs.existsSync(logDir)) {
         fs.mkdirSync(logDir, { recursive: true });
@@ -12,10 +11,8 @@ async function main() {
     const logFile = path.join(logDir, "temp.log");
     fs.writeFileSync(logFile, "", "utf-8");
 
-    console.log("正在初始化agent...");
     const agent = new SimplifiedAgent();
     await agent.initialize();
-    console.log("Agent初始化完成。");
 
     let input = hanoiTask;
 

@@ -11,10 +11,10 @@ class SimplifiedAgent {
     }
 
     async initialize() {
-        this.stateAgent = new BaseAgent(StatePrompt);
+        this.stateAgent = new BaseAgent(StatePrompt, "StateAgent");
         await this.stateAgent.initialize();
 
-        this.actionAgent = new BaseAgent(ActionPrompt);
+        this.actionAgent = new BaseAgent(ActionPrompt, "ActionAgent");
         await this.actionAgent.initialize();
     }
 

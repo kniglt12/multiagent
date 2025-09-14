@@ -11,7 +11,7 @@ const logFile = path.join(logDir, 'temp.log');
 function makeLog(agentInstance, task, result) {
     const logEntry = `
 ================================================================================
-Agent: ${agentInstance.constructor.name}
+Agent: ${agentInstance.name}
 Task: ${task}
 Result: ${result}
 ================================================================================
@@ -20,8 +20,9 @@ Result: ${result}
 }
 
 class BaseAgent {
-    constructor(sysPrompt = null) {
+    constructor(sysPrompt = null, name = 'BaseAgent') {
         this.system_message = sysPrompt;
+        this.name = name;
         this.agent = null;
         this.client = null;
         this.model = null;
