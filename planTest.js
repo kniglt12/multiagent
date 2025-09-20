@@ -24,7 +24,7 @@ async function main() {
             const result = await agent.run(input);
             console.log("下一步指令:", result);
 
-            if (result.includes("游戏已经完成")) {
+            if (result.includes("游戏已经完成") || result.includes("游戏已完成")) {
                 if (hanoiState.C.length === 4 && JSON.stringify(hanoiState.C) === JSON.stringify([4, 3, 2, 1])) {
                     console.log("游戏已经完成！");
                     break;
