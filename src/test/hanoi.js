@@ -43,8 +43,9 @@ const hanoiTask = `
 
 ### 六、输出格式
 
-你输出的最后一行必须严格遵循以下格式（不允许任何 markdown 符号）：
+如果你需要给出指令：你输出的最后一行必须严格遵循以下格式（不允许任何 markdown 符号）：
 move N from X to Y
+其他情况并不需要遵循这个格式。
 `;
 
 let hanoiState = {
