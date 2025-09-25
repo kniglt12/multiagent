@@ -6,6 +6,10 @@ npm install
 node planTest.js 
 ```
 
+无法运行npm或者node?
+
+自行尝试搜索安装一下吧。
+
 #### 代码说明
 
 - **`planTest.js`**: 项目的入口文件，用于运行汉诺塔游戏测试。它初始化 `SimplifiedAgent` 并管理游戏循环，直到游戏完成。（不需要修改）
